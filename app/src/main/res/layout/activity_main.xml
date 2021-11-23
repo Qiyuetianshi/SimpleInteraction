@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ad"
+    tools:context=".MainActivity">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="安卓直接访问MySQL数据库示例"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="#9C27B0"-->
+<!--        android:textStyle="bold"/>-->
+
+<!--    <Button android:id="@+id/btn_query_count"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="查询用户数量"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="#673AB7"-->
+<!--        android:textStyle="bold"/>-->
+
+<!--    <TextView android:id="@+id/tv_user_count"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="用户数量为："-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="#FF5722"-->
+<!--        android:textStyle="bold"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名："
+                android:textStyle="bold"
+                android:textColor="#00f"
+                android:textSize="20sp"/>
+
+            <EditText android:id="@+id/et_uname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入用户名"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密    码："
+                android:textStyle="bold"
+                android:textColor="#00f"
+                android:textSize="20sp"/>
+
+            <EditText android:id="@+id/et_upass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:hint="请输入用户密码"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="登录"
+            android:textSize="20sp"
+            android:textColor="#673AB7"
+            android:textStyle="bold"/>
+
+        <Button android:id="@+id/btn_logup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="注册"
+            android:textSize="20sp"
+            android:textColor="#673AB7"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

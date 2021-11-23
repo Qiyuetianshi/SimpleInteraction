@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".roomActivity">
+    <!--用户管理界面-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark">
+        <ImageView android:id="@+id/btn_home"
+            android:layout_marginLeft="100dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/whiteleft"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lv_user"
+        android:layout_width="match_parent"
+        android:layout_height="600dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_mes"
+            android:layout_width="600dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入信息"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="发送"
+            android:textColor="#673AB7"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <!--        <ImageView android:id="@+id/btn_home"-->
+<!--            android:layout_marginLeft="100dp"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/back"/>-->
+
+<!--        <ImageView android:id="@+id/btn_mes"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="100dp"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/add"/>-->
+    </RelativeLayout>
+
+</LinearLayout>

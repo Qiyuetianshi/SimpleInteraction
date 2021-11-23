@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="100dp"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您当前的状态为："
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#070707"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="180dp"
+            android:layout_alignParentRight="true"
+            android:text="休息"
+            android:textSize="20sp"
+            android:textColor="#7C298A"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <TextView android:id="@+id/tv_user_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="您可以选择以下状态："
+        android:textSize="20sp"
+        android:textColor="#FF5722"
+        android:textStyle="bold"/>
+
+
+    <Button android:id="@+id/btn_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在线"
+        android:textSize="20sp"
+        android:textColor="#673AB7"
+        android:textStyle="bold"/>
+    <Button android:id="@+id/btn_rex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="休息（仍可被他人咨询）"
+        android:textSize="20sp"
+        android:textColor="#673AB7"
+        android:textStyle="bold"/>
+    <Button android:id="@+id/btn_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="离线（离线时您将不能被他人咨询）"
+        android:textSize="20sp"
+        android:textColor="#673AB7"
+        android:textStyle="bold"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView android:id="@+id/btn_mes"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/inbox0"/>
+
+        <ImageView android:id="@+id/btn_me"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/me1"/>
+
+    </RelativeLayout>
+</LinearLayout>
