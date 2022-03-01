@@ -3,7 +3,13 @@ package cn.edu.bzu.ie.mysqldb;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,6 +18,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 /**
  * 主界面业务逻辑代码
@@ -91,6 +100,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 handler.sendMessage(msg);
             }
         }).start();
+    }
+    private boolean checkPackInfo(String packname) {
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = getPackageManager().getPackageInfo(packname, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return packageInfo != null;
+    }
+
+    private void dogo(){
+
+//        PackageManager packageManager = getApplicationContext().getPackageManager();
+//        List<ApplicationInfo>  a =  packageManager.getInstalledApplications(0);
+//
+//        Intent intent = new Intent(Intent.ACTION_MAIN);
+//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+//        ComponentName cn = new ComponentName("packageName", "className");
+//        intent.setComponent(cn);
+//        startActivity(intent);
+
+        PackageManager packageManager = getPackageManager();
+        if (checkPackInfo("com.MobileTicket")) {
+            Intent intent = packageManager.getLaunchIntentForPackage("com.MobileTicket");
+            startActivity(intent);
+        } else {
+
+//            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.12306.cn/index/"));
+//            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.12306.cn/index/"));
+//            Uri uri = Uri.parse("market://search?q=" + "铁路12306");
+//            Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+//            try {
+//                startActivity(goToMarket);
+//            } catch (ActivityNotFoundException e) {
+//                e.printStackTrace();
+//            }
+            Uri uri = Uri.parse("market://details?id=" + "com.MobileTicket");
+            Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+            try {
+                this.startActivity(goToMarket);
+            } catch (ActivityNotFoundException e) {
+                e.printStackTrace();
+            }
+//            startActivity(intent);
+//            Toast.makeText(MainActivity.this, "没有安装" + "com.MobileTicket", 1).show();
+        }
     }
 
     // 执行登录操作
